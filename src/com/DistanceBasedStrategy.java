@@ -10,16 +10,10 @@ public class DistanceBasedStrategy implements StrategyType {
         this.reverse = false;
     }
 
-    public DistanceBasedStrategy(boolean reverse) {
-        this.reverse = reverse;
-    }
-
-    public boolean isReverse() {
-        return reverse;
-    }
-
-    public void setReverse(boolean reverse) {
-        this.reverse = reverse;
+    @Override
+    public StrategyType reverse() {
+        this.reverse = true;
+        return this;
     }
 
     @Override
